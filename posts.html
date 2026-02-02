@@ -2,60 +2,85 @@
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <title>Posts</title>
-
-<style>
-body {
-background: #fff0f5;
-font-family: "Comic Sans MS";
-    }
-
-.container {
-    width: 900px;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border: 2px solid pink;
-}
-
-.post {
-    border-bottom: 1px dashed #ccc;
-    padding: 15px 0;
-}
-
-.post a {
-    color: deeppink;
-    font-size: 20px;
-}
-
-.post a: hover{
-    text-decoration: underline;
-}
-</style>
+    <title>Posts</title>
+    <link rel="stylesheet" href="style.css">
     </head>
 
-<body>
+    <body>
 
-    <marquee scrollamount="4">📎Arquivos do blog</marquee>
-
-    <div class="container">
-        <h1>Posts</h1>
-
-        <img class="gif" src="bike.gif">
-
-        <div class="post">
-            <a href="posts1.html">Post de boas-vindas (✿◡‿◡)</a>
-            <p>29 de janeiro de 2026</p>
-        </div>
-
-        <div class="post">
-            <a href="posts1.html">Blogar é resistir</a>
-            <p>30 de janeiro de 2026</p>
-        </div>
-
-        <a href="index.html">← Voltar para a página inicial</a>
+        <div id="winamp">
+    <div class="winamp-header">WINAMP
+        <button class="minimize" onclick="toggleWinamp()">_</button>
     </div>
 
-</body>
+    <div class="led"></div>
 
+    <div class="winamp-screen">
+        <marquee behavior="scroll" direction="left">
+            ♫ Tocando agora: Música do Blog da Bruna ♫
+        </marquee>
+    </div>
+
+    <div class="winamp-buttons">
+        <button onclick="playMusic()">▶</button>
+        <button onclick="pauseMusic()">⏸</button>
+        <button onclick="stopMusic()">■</button>
+    </div>
+
+    <audio id="player" loop>
+        <source src="funky-background-7664.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+
+
+        <marquee>Posts do blog • Moda • Novelas • Pensamentos • Vida</marquee>
+
+        <div class="layout">
+
+            <div class="menu">
+                <h3>MENU</h3>
+                <a href="index.html">Início</a>
+                <a href="posts.html">Posts</a>
+                <a href="novelas.html">Novelas</a>
+                <a href="downloads.html">Downloads</a>
+
+                <img class="gif" src="gato.gif">
+            </div>
+
+            <div class="container">
+
+                <h1>Posts</h1>
+
+                <div class="box">
+                    <h2>Moda anos 2000</h2>
+                    <p>Cintura baixa, gloss, bolsas pequenas, regatas. Icônico com certeza.</p>
+                    <a href="posts1.html">Ler post completo</a>
+                </div>
+
+                <div class="box">
+                    <h2>Novelas que moram no coração</h2>
+                    <p>Elas acabam, mas vivem dentro de nós!</p>
+                    <a href="#">Ler post completo</a>
+                </div>
+
+            <div class="box">
+                <h2>Pensamentos da noite</h2>
+                <p>Estava lembrando que quando a TV Globo reprisou A Viagem. Aff, amo...</p>
+                <a href="#">Ler post completo</a>
+
+                <div class="box" style="text-align:center;">
+                    <img class="gif" src="Vamp-Gif.gif">
+                    <p>Mais posts em breve ;D</p>
+                </div>
+
+            </div>
+            </div>
+        </div>
+
+        <footer>Blog da Bruna • Minhas publicações</footer>
+
+<script src="script.js"></script>
+
+    </body>
 </html>
